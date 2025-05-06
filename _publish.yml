@@ -1,0 +1,4 @@
+- source: chff_map.qmd
+  quarto-pub:
+    - id: 467f53ee-7cea-4ec1-8e0d-1cb997b67f28
+      url: https://psychicautomaton.quarto.pub/crown-heights-food-forest-map

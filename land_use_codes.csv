@@ -1,0 +1,14 @@
+land use code,land use categories,building classes
+1,one and two family buildings,"all A, all B, Z0"
+2,multi-family walk up buildings,"C0,C1,C2,C3,C4,C5,C6,C8,C9, CM, R1,R2,R3,R6"
+3,multi-family elevator buildings,"D0,D1,D2,D3,D4,D5,D8,D9,H6,H7,R4,RD"
+4,mixed residential and commercial buildings,"C7,D6,D7,K4,O8,R8,R9,RM,RR,RX,RZ, all S"
+5,commercial and office buildings,"G8,GU,GW,H1,H2,H3,H4,H5,H9,HB,HH,HR,HS, all J,K1,K2,K3,K5,K6,
+K7,K8,K9,O1,O2,O3,O4,O5,O6,O7,O9,P1,R5,R7,RB,RC,RH,RI,RK,RS"
+6,industrial and manufacturing buildings,"all E, all F, all L, RW"
+7,transportation and utility,"G2,G3,G4,G5,G9, all T, all U,Y6,Y7,Y8,Y9"
+8,public facilities and institutions,"H8, all I, all M, all N,P2,P3,P5,P7,P8,P9,RA, all W,Y1,Y2,
+Y3,Y4,Z1,Z3,Z4,Z5"
+9,open space & outdoor recreation,"P4,P6, all Q, Z8"
+10,parking facilities,"G0,G1,G6,G7,RG,RP,Z2"
+11,vacant land,all V

@@ -1,0 +1,4 @@
+"0","owner_type <- read.csv('owner_type_codes.csv')"
+"0",""
+"0","chff <- left_join(chff, owner_type,"
+"0","                  by = c('OwnerType' = 'Code'))"
