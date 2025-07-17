@@ -5,6 +5,7 @@ format:
   html:
     theme: minty
     nav-buttons: [github]
+    embed-resources: true
     github: https://github.com/psychicautomaton/
     grid:
       sidebar-width: 20px
@@ -80,7 +81,7 @@ chff <- left_join(chff, owner_type,
 
 # Interactive Map of Crown Heights for Site Selection for a Food Forest
 
-#  
+# 
 
 ### (lots with area \> 1/8th acre that are either vacant or zoned for public recreation)
 
