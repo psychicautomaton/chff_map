@@ -1,0 +1,31 @@
+AoiSoilThematicMapID: 13822197
+CreationDateTime: "2/21/2025 7:18:35 PM"
+SdvAttributeName: "Soil Moisture Subclass"
+AggregationMethod: "Dominant Condition"
+TiebreakRule: -1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Choice"
+ResultPrecision: ""
+ResultColumnName: "MoistSubcl"
+SdvAttributeDescription: "Soil moisture subclasses are taxonomic subgroup criteria, whether included or not in the name of the subgroup.  The definition of each moisture subclass is dependent upon the specific taxonomic great group to which it is attached.
+
+A taxonomic moisture subclass that is not ""typic"" reflects a taxonomic intergrade or extragrade.  Some soils having a particular moisture regime are transitional to another regime (intergrades) or are grading away from the regime to which they are assigned (extragrades).  An example of an intergrade is an Aquic Haplustalf.  The taxonomic moisture subclass is ""aquic"".  An example of an extragrade is an Aeric Albaqualf.  The taxonomic moisture subclass is ""aeric"".
+
+References:
+
+Soil Survey Staff. 1999. Soil taxonomy: A basic system of soil classification for making and interpreting soil surveys. 2nd edition. Natural Resources Conservation Service. U.S. Department of Agriculture Handbook 436.
+
+Soil Survey Staff. 2022. Keys to soil taxonomy. 13th edition. U.S. Department of Agriculture, Natural Resources Conservation Service. (The soils in a given survey area may have been classified according to earlier editions of this publication.)"

@@ -1,0 +1,8 @@
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25532852"|"11067620"
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25532894"|"11067629"
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25533176"|"11067727"
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25533032"|"11067671"
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25533340"|"11067780"
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25533198"|"11067731"
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25533086"|"11067682"
+"NRCS Forestland Site"|"Ecological Site Description Database"|"F149BY100NY"|"Urban Site Complex"|"25533268"|"11067746"

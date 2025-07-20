@@ -1,0 +1,72 @@
+---
+title: "chff_soil_data"
+output: html_document
+---
+
+
+
+```{r libs_config}
+library(sys)
+Sys.setenv(R_SSURGOPORTAL_USE_VIRTUALENV = FALSE)
+Sys.getenv("R_SSURGOPORTAL_USE_VIRTUALENV")
+library(SSURGOPortal)
+library(tidyverse)
+library(reticulate)
+use_python("/Users/mxdwivedi/.pyenv/versions/3.11.12/bin/python",
+           required = TRUE)
+py_config()
+library(soilDB)
+library(sf)
+```
+
+```{r}
+ssurgo_portal("getstatus")
+```
+
+```{r}
+ssurgo_portal("copytemplate", 
+              templatename = "GeoPackage", 
+              folder = "db_gpkg", 
+              filename = "chff", 
+              overwrite = TRUE)
+
+```
+
+```{r}
+td <- file.path(tempdir(), "ssurgo_test")
+```
+
+
+
+```{r}
+download_ssurgo("areasymbol IN (
+                'NY047')",
+                exdir = td)
+```
+```{r}
+ssurgo_portal(
+  "pretestimportcandidates",
+  database = "db_gpkg/chff.gpkg",
+  root = td,
+  istabularonly = FALSE
+)
+
+```
+
+```{r}
+ssurgo_portal(
+  "importcandidates",
+  database = "db_gpkg/chff.gpkg",
+  root = td,
+  istabularonly = FALSE,
+  skippretest = TRUE,
+  subfolders = c('NY047'),
+  loadinspatialorder = FALSE,
+  loadspatialdatawithinsubprocess = FALSE,
+  dissolvemupolygon = FALSE
+)
+```
+
+```{r}
+ssurgo_portal()
+```

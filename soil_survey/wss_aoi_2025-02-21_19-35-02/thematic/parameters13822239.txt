@@ -1,0 +1,40 @@
+AoiSoilThematicMapID: 13822239
+CreationDateTime: "2/21/2025 7:29:13 PM"
+SdvAttributeName: "Order of Soil Survey"
+AggregationMethod: "No Aggregation Necessary"
+TiebreakRule: 1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Choice"
+ResultPrecision: ""
+ResultColumnName: "OrderSsa"
+SdvAttributeDescription: "The Order of a soil survey indicates the level of detail and relative intensity of field observation under which the map unit was developed.  The order of a survey is commonly reflected in the scale of mapping, but not determined by it. Rather, the order of a survey is determined by the field procedures used to identify soil components and place map unit boundaries, the minimum permissible size of map unit delineation, and the kind of map unit to which soil components are aggregated.
+
+Order 1 - Very intensive.  The soils in each delineation are identified by transecting or traversing or even grid mapping. Soil boundaries are observed throughout their length. Remotely sensed data are used as an aid in boundary delineation.  Order 1 surveys are made if very detailed information about soils, generally in small areas, is needed for very intensive land uses.
+
+Order 2 - Intensive.  The soils in each delineation are identified by field observations and by remotely sensed data. Boundaries are verified at closely spaced intervals.  Order 2 surveys are made if detailed information about soil resources is needed to make predictions of soil suitability and treatment needs for intensive land uses. The information can be used in planning for general agriculture, construction, urban development, and similar uses that require precise knowledge of the soils and their variability.
+
+Order 3 - Extensive.  Soil boundaries are plotted by observation and interpretation of remotely sensed data. They are verified by traversing representative areas and by some transects.  Order 3 surveys are made where land uses do not require precise knowledge of small areas or detailed soil information. The survey areas are commonly dominated by a single land use and have few subordinate uses. The soil information can be used in planning for range, forest, and recreational areas and in community planning.
+
+Order 4 - Extensive. Soil boundaries are plotted by interpretation of remotely sensed data. They are verified by traversing representative areas and by some transects.  Order 4 surveys are made if general soil information is needed about the potential and general management of land for extensive uses. The information can be used in locating, comparing, and selecting suitable areas for major kinds of land use, in regional land use planning, and in selecting areas for more intensive study and investigation.
+
+Order 5 - Very extensive.  The soil patterns and composition of map units are determined by mapping representative ideas and like areas by interpretation of remotely sensed data. Soils are verified by some onsite investigation or by traversing. Order 5 surveys are made to collect soil information in very large areas at a level of detail suitable for planning regional land use and interpreting information at a high level of generalization. The primary use of this information is selection of areas for more intensive study.
+
+Some soil survey areas have two or more orders of mapping because they have distinct parts with different needs.  For example, one part may be mapped to make predictions related to irrigation and the other may be mapped to make predictions related to range management. For the irrigated part, areas are mapped at the intensity required for an order 2 soil survey. For the rangeland part, areas are mapped as an order 3 survey. 
+
+Reference:
+
+Soil Science Division Staff. 2017. Soil survey manual. Chapter 4. C. Ditzler, K. Scheffe, and H.C. Monger (eds.). USDA Handbook 18. Government Printing Office, Washington, D.C.
+"

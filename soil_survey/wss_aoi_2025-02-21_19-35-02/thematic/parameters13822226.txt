@@ -1,0 +1,39 @@
+AoiSoilThematicMapID: 13822226
+CreationDateTime: "2/21/2025 7:24:14 PM"
+SdvAttributeName: "National Commodity Crop Productivity Index"
+AggregationMethod: "Weighted Average"
+TiebreakRule: 1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Float"
+ResultPrecision: 3
+ResultColumnName: "NCCPI"
+SdvAttributeDescription: "AGR - Agriculture
+
+NCCPI - National Commodity Crop Productivity Index
+
+National Commodity Crop Productivity Index is a method of arraying the soils of the United States for non-irrigated commodity crop production based on their inherent soil properties.  This version features a separate index for soybeans.  In the past, soybeans and corn were considered together.  The rating a soil is assigned is the highest one of four basic crop group indices, which are based on the climate where the crop is typically grown.  Cooler climates are represented by winter wheat, moderate climates are represented by corn and soybeans, and warmer climates are represented by cotton.  (http://www.nrcs.usda.gov/Internet/FSE_DOCUMENTS/nrcs142p2_050734.pdf)
+
+The interpretation is applicable to both heavily populated and sparsely populated areas. Ratings are for soils in their present condition. The present land use is not considered in the ratings. 
+
+Ratings are based on properties and qualities to the depth normally observed during soil mapping (approximately 6 feet).  Soil, site, and climate properties that influence the growth of crops are major considerations. Soil productivity is influenced by many soil properties.  An ideal soil will store adequate amounts of water to nurture the crop between rains.  This soil will have a near-neutral pH, will store nutrients, and lack toxic materials.  The soil will have no barriers, either physical or chemical, to root growth.  Water and gas transmission through the soil will be sufficient to maintain both water and oxygen at sufficient levels in the root zone.   The soil will not be saturated with water during the growing season to the point that root growth is inhibited.  The soil will not be subject to excessive flooding or ponding during the growing season.  Slope is an important consideration because it affects erosion by water, runoff, and the operation of equipment.  The climate must provide adequate water and heat to allow the desired crop to mature.  A soil that differs from the ideal in any of these features will have lower inherent productivity for a particular crop.  The further a soil differs from ideality in any one or all of the factors that determine inherent productivity, the lower its inherent productivity will be. 
+
+The ratings are both verbal and numerical. Rating class terms indicate the estimated productivity which is determined by all of the soil, site, and climatic features that affect crop productivity. ""High inherent productivity"" indicates that the soil, site, and climate have features that are very favorable for crop production. High yields and low risk of crop failure can be expected if a high level of management is employed. ""Moderately high inherent productivity"" indicates that the soil has features that are generally quite favorable for crop production.  Good yields and moderately low risk of crop failure can be expected. ""Moderate inherent productivity"" indicates that the soil has features that are generally favorable for crop production.  Good yields and moderate risk of crop failure can be expected.  ""Moderately low inherent productivity"" indicates that the soil has features that are generally not favorable for crop production.  Low yields and moderately high risk of crop failure can be expected.   ""Low inherent productivity"" indicates that the soil has one or more features that are unfavorable for crop production.  Low yields and high risk of crop failure can be expected.  
+
+Numerical ratings indicate the overall productivity of the soil. The ratings are shown in decimal fractions ranging from 1.00 to 0.01. They indicate gradations between the point at which the combination of soil, site, and climate features has the greatest positive impact on inherent productivity (1.00) and the point at which the soil features are very unfavorable (0.01). 
+
+The map unit components listed for each map unit in the accompanying Summary by Map Unit table in Web Soil Survey or the Aggregation Report in Soil Data Viewer are determined by the aggregation method chosen. An aggregated rating class is shown for each map unit. The components listed for each map unit are only those that have the same rating class as listed for the map unit. The percent composition of each component in a particular map unit is presented to help the user better understand the percentage of each map unit that has the rating presented.  
+
+Other components with different ratings may be present in each map unit. The ratings for all components, regardless of the map unit aggregated rating, can be viewed by generating the equivalent report from the Soil Reports tab in Web Soil Survey. Onsite investigation may be needed to validate these interpretations and to confirm the identity of the soil on a given site."

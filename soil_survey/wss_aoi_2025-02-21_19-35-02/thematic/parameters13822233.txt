@@ -1,0 +1,43 @@
+AoiSoilThematicMapID: 13822233
+CreationDateTime: "2/21/2025 7:26:44 PM"
+SdvAttributeName: "Nonirrigated Capability Class"
+AggregationMethod: "Dominant Condition"
+TiebreakRule: 1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Choice"
+ResultPrecision: ""
+ResultColumnName: "NirrCpCls"
+SdvAttributeDescription: "Land capability classification shows, in a general way, the suitability of soils for most kinds of field crops. Crops that require special management are excluded. The soils are grouped according to their limitations for field crops, the risk of damage if they are used for crops, and the way they respond to management. The criteria used in grouping the soils do not include major and generally expensive landforming that would change slope, depth, or other characteristics of the soils, nor do they include possible but unlikely major reclamation projects. Capability classification is not a substitute for interpretations that show suitability and limitations of groups of soils for rangeland, for woodland, or for engineering purposes.
+
+In the capability system, soils are generally grouped at three levels-capability class, subclass, and unit. Only class and subclass are included in this data set.
+
+Capability classes, the broadest groups, are designated by the numbers 1 through 8. The numbers indicate progressively greater limitations and narrower choices for practical use. The classes are defined as follows:
+
+Class 1 soils have few limitations that restrict their use.
+
+Class 2 soils have moderate limitations that reduce the choice of plants or that require moderate conservation practices.
+
+Class 3 soils have severe limitations that reduce the choice of plants or that require special conservation practices, or both.
+
+Class 4 soils have very severe limitations that reduce the choice of plants or that require very careful management, or both.
+
+Class 5 soils are subject to little or no erosion but have other limitations, impractical to remove, that restrict their use mainly to pasture, rangeland, forestland, or wildlife habitat.
+
+Class 6 soils have severe limitations that make them generally unsuitable for cultivation and that restrict their use mainly to pasture, rangeland, forestland, or wildlife habitat.
+
+Class 7 soils have very severe limitations that make them unsuitable for cultivation and that restrict their use mainly to grazing, forestland, or wildlife habitat.
+
+Class 8 soils and miscellaneous areas have limitations that preclude commercial plant production and that restrict their use to recreational purposes, wildlife habitat, watershed, or esthetic purposes."

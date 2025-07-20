@@ -22,7 +22,6 @@ knitr::opts_chunk$set(
   warning = FALSE,
   message=FALSE
 )
-
 ```
 
 ```{r, results = 'hide'}
@@ -36,6 +35,73 @@ suppressPackageStartupMessages(library(htmlwidgets))
 suppressPackageStartupMessages(library(htmltools))
 library(flextable)
 ```
+
+
+```{r, results='hide'}
+dbp <- "/Users/mxdwivedi/Documents/GIS/chff/chff_map/db_gpkg/chff.gpkg"
+```
+
+```{r, results='hide'}
+mu_aggs <- st_read(dbp,
+                      layer = "muaggatt") #%>% 
+ # select(musym, Clay_DCD_AL) %>%
+ # distinct()
+lims_soil_organisms <- st_read(dbp,
+                               layer = "rating_AeriOrgL_DCD")
+flood_freq_class <- st_read(dbp,
+                            layer = "rating_FloodFCls_DCD_jan_dec")
+
+
+
+depth_water_table <- st_read(dbp,
+                             layer = "rating_Dep2WatTbl_DCD_jan_dec")
+
+drain_class <- st_read(dbp,
+                       layer = "rating_DrainClass_DCD")
+
+
+drought_vuln <- st_read(dbp,
+                        layer = "rating_DrouVulSoi_DCD")
+
+hand_planting_suitability <- st_read(dbp,
+                                     layer = "rating_HandPlant_DCD")
+
+
+compaction_susceptibility <- st_read(dbp,
+                                     layer = "rating_SoilSuscCo_DCD")
+
+surface_texture <- st_read(dbp,
+                           layer = "rating_TexSurf_DCD_SL")
+
+
+crop_productivity_index <- st_read(dbp,
+                                   layer = "rating_NCCPI_WA")
+
+
+
+
+
+
+
+
+
+musym <- st_read(dbp,
+                      layer = "mapunit")  %>% 
+  select(musym, muname, interpfocus) %>% distinct()
+
+
+mupoly <- st_read(dbp,
+                      layer = "mupolygon") %>%
+  select(musym, shape, areasymbol) %>% distinct()
+```
+
+
+```{r data_cleaning}
+
+```
+
+
+
 
 ```{r, results='hide'}
 chff <- st_read('chff_pluto.shp') %>%

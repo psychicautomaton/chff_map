@@ -1,0 +1,42 @@
+AoiSoilThematicMapID: 13822224
+CreationDateTime: "2/21/2025 7:23:35 PM"
+SdvAttributeName: "Hydric Rating by Map Unit"
+AggregationMethod: "Percent Present"
+TiebreakRule: -1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Integer"
+ResultPrecision: ""
+ResultColumnName: "HydrcRatng"
+SdvAttributeDescription: "This rating indicates the percentage of map units that meets the criteria for hydric soils. Map units are composed of one or more map unit components or soil types, each of which is rated as hydric soil or not hydric. Map units that are made up dominantly of hydric soils may have small areas of minor nonhydric components in the higher positions on the landform, and map units that are made up dominantly of nonhydric soils may have small areas of minor hydric components in the lower positions on the landform. Each map unit is rated based on its respective components and the percentage of each component within the map unit. 
+
+The thematic map is color coded based on the composition of hydric components. The five color classes are separated as 100 percent hydric components, 66 to 99 percent hydric components, 33 to 65 percent hydric components, 1 to 32 percent hydric components, and less than one percent hydric components.
+
+In Web Soil Survey, the Summary by Map Unit table that is displayed below the map pane contains a column named 'Rating'.  In this column the percentage of each map unit that is classified as hydric is displayed.
+
+Hydric soils are defined by the National Technical Committee for Hydric Soils (NTCHS) as soils that formed under conditions of saturation, flooding, or ponding long enough during the growing season to develop anaerobic conditions in the upper part (Federal Register, 1994). Under natural conditions, these soils are either saturated or inundated long enough during the growing season to support the growth and reproduction of hydrophytic vegetation. 
+
+The NTCHS definition identifies general soil properties that are associated with wetness. In order to determine whether a specific soil is a hydric soil or nonhydric soil, however, more specific information, such as information about the depth and duration of the water table, is needed. Thus, criteria that identify those estimated soil properties unique to hydric soils have been established (Federal Register, 2002). These criteria are used to identify map unit components that normally are associated with wetlands. The criteria used are selected estimated soil properties that are described in ""Soil Taxonomy"" (Soil Survey Staff, 1999) and ""Keys to Soil Taxonomy"" (Soil Survey Staff, 2006) and in the ""Soil Survey Manual"" (Soil Survey Division Staff, 1993). 
+
+If soils are wet enough for a long enough period of time to be considered hydric, they should exhibit certain properties that can be easily observed in the field. These visible properties are indicators of hydric soils. The indicators used to make onsite determinations of hydric soils are specified in ""Field Indicators of Hydric Soils in the United States"" (Hurt and Vasilas, 2006). 
+
+References: 
+
+Federal Register. July 13, 1994. Changes in hydric soils of the United States. 
+Federal Register. September 18, 2002. Hydric soils of the United States. 
+Hurt, G.W., and L.M. Vasilas, editors. Version 6.0, 2006. Field indicators of hydric soils in the United States. 
+Soil Survey Division Staff. 1993. Soil survey manual. Soil Conservation Service. U.S. Department of Agriculture Handbook 18. 
+Soil Survey Staff. 1999. Soil taxonomy: A basic system of soil classification for making and interpreting soil surveys. 2nd edition. Natural Resources Conservation Service. U.S. Department of Agriculture Handbook 436. 
+Soil Survey Staff. 2006. Keys to soil taxonomy. 10th edition. U.S. Department of Agriculture, Natural Resources Conservation Service."

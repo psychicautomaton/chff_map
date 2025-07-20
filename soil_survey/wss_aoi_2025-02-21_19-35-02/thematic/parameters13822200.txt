@@ -1,0 +1,29 @@
+AoiSoilThematicMapID: 13822200
+CreationDateTime: "2/21/2025 7:19:05 PM"
+SdvAttributeName: "Soil Moisture Class"
+AggregationMethod: "Dominant Condition"
+TiebreakRule: -1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Choice"
+ResultPrecision: ""
+ResultColumnName: "MoistRegim"
+SdvAttributeDescription: "The soil moisture class is the taxonomic moisture regime.  The soil moisture regimes are defined in terms of the level of ground water and in terms of the seasonal presence or absence of water held at a tension of less than 1500 kPa in the moisture control section.
+
+Complete definitions and criteria for soil moisture regimes are available in the references below.
+
+Soil Survey Staff. 1999. Soil taxonomy: A basic system of soil classification for making and interpreting soil surveys. 2nd edition. Natural Resources Conservation Service. U.S. Department of Agriculture Handbook 436.
+
+Soil Survey Staff. 2022. Keys to soil taxonomy. 13th edition. U.S. Department of Agriculture, Natural Resources Conservation Service. (The soils in a given survey area may have been classified according to earlier editions of this publication.) "

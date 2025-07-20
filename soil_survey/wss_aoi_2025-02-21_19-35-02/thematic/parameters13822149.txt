@@ -1,0 +1,27 @@
+AoiSoilThematicMapID: 13822149
+CreationDateTime: "2/21/2025 7:03:33 PM"
+SdvAttributeName: "Conservation Tree and Shrub Group"
+AggregationMethod: "Dominant Condition"
+TiebreakRule: -1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Choice"
+ResultPrecision: ""
+ResultColumnName: "ConsTSG"
+SdvAttributeDescription: "Each tree and shrub species has certain climatic and physiographic limits. Within these parameters, trees and shrubs may be well suited or poorly suited to a given environment because of climate or site or soil characteristics. On the basis of the performance of individual species to specific conditions of soil, climate, physiography, and management, Conservation Tree and Shrub Groups (CTSGs) have been developed. Individual soils have been grouped with similar soils into one of the 10 main CTSGs. Most of these main groups are further divided into subgroups.
+
+This interpretation provides guidance in selecting the species best suited to each of the groups of soils within each vegetative zone. It also can be used for predicting survival, height, growth, species attributes, and effectiveness and for selecting species for windbreaks, riparian plantings, recreation and wildlife plantings, and ornamental or environmental plantings.
+
+Tree and shrub species associated with each CTSG are broken down by vegetative zones (rainfall zones). These lists are available in the local office of the USDA, Natural Resources Conservation Service, or on the Web in the electronic Field Office Technical Guide. Because vegetative zones are rather large, climatic differences within a zone should be considered when species are recommended for planting. For example, some species adapted to the eastern end of a zone may be inadequately adapted to the western end. Care must be taken to ensure that conditions on individual sites are considered when species suitability and performance are determined. A case-by-case decision may be necessary to determine which CTSG is most appropriate when an individual site has characteristics that differ from those of the CTSG in which it occurs. These differences occur because of inclusions of other soils, site modifications (such as leveling and drainage manipulation), soil pH (calcareous sites), irrigation, soil amendments, or other factors."

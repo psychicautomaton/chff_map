@@ -1,0 +1,7 @@
+LegendText,RgbString
+"Low attenuation","#FF0000"
+"Moderately low attenuation","#FF7F00"
+"Moderate attenuation","#FFFF00"
+"Moderately high attenuation","#7FFF00"
+"High attenuation","#00FF00"
+"Not rated or not available","#DCDCDC"

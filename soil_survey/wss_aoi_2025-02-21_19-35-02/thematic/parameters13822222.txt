@@ -1,0 +1,23 @@
+AoiSoilThematicMapID: 13822222
+CreationDateTime: "2/21/2025 7:23:19 PM"
+SdvAttributeName: "Ecological Classification Name"
+AggregationMethod: "Dominant Condition"
+TiebreakRule: -1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: "Class"
+PrimaryDataSelectOption: "NRCS Forestland Site"
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "VText"
+ResultPrecision: ""
+ResultColumnName: "EcoClassNm"
+SdvAttributeDescription: "Ecological classifications consist of a series of vegetative classification systems developed by various partners in the National Cooperative Soil Survey. The classifications include, but are not limited to, systematic vegetative groupings. Examples include NRCS ecological sites, United States Forest Service plant associations, and forage suitability groups. The classifications systems are identified by the Ecological Classification Type Name field, which is in the Component Ecological Classification table."

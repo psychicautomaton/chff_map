@@ -1,0 +1,23 @@
+AoiSoilThematicMapID: 13822223
+CreationDateTime: "2/21/2025 7:23:27 PM"
+SdvAttributeName: "Farmland Classification"
+AggregationMethod: "No Aggregation Necessary"
+TiebreakRule: -1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Choice"
+ResultPrecision: ""
+ResultColumnName: "FrmlndCls"
+SdvAttributeDescription: "Farmland classification identifies map units as prime farmland, farmland of statewide importance, farmland of local importance, or unique farmland. It identifies the location and extent of the soils that are best suited to food, feed, fiber, forage, and oilseed crops. NRCS policy and procedures on prime and unique farmlands are published in the ""Federal Register,"" Vol. 43, No. 21, January 31, 1978."

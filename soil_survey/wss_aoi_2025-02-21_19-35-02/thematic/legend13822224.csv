@@ -1,0 +1,7 @@
+LegendText,RgbString
+"Hydric (100%)","#FF0000"
+"Hydric (66 to 99%)","#FF9600"
+"Hydric (33 to 65%)","#FFFF00"
+"Hydric (1 to 32%)","#96FF96"
+"Not Hydric (0%)","#00FF00"
+"Not rated or not available","#DCDCDC"

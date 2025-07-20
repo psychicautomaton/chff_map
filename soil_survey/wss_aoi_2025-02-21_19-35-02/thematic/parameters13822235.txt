@@ -1,0 +1,29 @@
+AoiSoilThematicMapID: 13822235
+CreationDateTime: "2/21/2025 7:27:55 PM"
+SdvAttributeName: "Nonirrigated Capability Subclass"
+AggregationMethod: "Dominant Condition"
+TiebreakRule: -1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "Choice"
+ResultPrecision: ""
+ResultColumnName: "NirrCpScls"
+SdvAttributeDescription: "Land capability classification shows, in a general way, the suitability of soils for most kinds of field crops. Crops that require special management are excluded. The soils are grouped according to their limitations for field crops, the risk of damage if they are used for crops, and the way they respond to management. The criteria used in grouping the soils do not include major and generally expensive landforming that would change slope, depth, or other characteristics of the soils, nor do they include possible but unlikely major reclamation projects. Capability classification is not a substitute for interpretations that show suitability and limitations of groups of soils for rangeland, for woodland, or for engineering purposes.
+
+In the capability system, soils are generally grouped at three levels-capability class, subclass, and unit. Only class and subclass are included in this data set.
+
+Capability subclasses are soil groups within one capability class. They are designated by adding a small letter, ""e,"" ""w,"" ""s,"" or ""c,"" to the class numeral, for example, 2e. The letter ""e"" shows that the main hazard is the risk of erosion unless close-growing plant cover is maintained; ""w"" shows that water in or on the soil interferes with plant growth or cultivation (in some soils the wetness can be partly corrected by artificial drainage); ""s"" shows that the soil is limited mainly because it is shallow, droughty, or stony; and ""c,"" used in only some parts of the United States, shows that the chief limitation is climate that is very cold or very dry.
+
+In class 1 there are no subclasses because the soils of this class have few limitations. Class 5 contains only the subclasses indicated by ""w,"" ""s,"" or ""c"" because the soils in class 5 are subject to little or no erosion. They have other limitations that restrict their use to pasture, rangeland, forestland, or wildlife habitat."

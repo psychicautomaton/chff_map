@@ -1,0 +1,79 @@
+AoiSoilThematicMapID: 13822241
+CreationDateTime: "2/21/2025 7:29:19 PM"
+SdvAttributeName: "PFAS Attenuation in Soils"
+AggregationMethod: "Dominant Condition"
+TiebreakRule: 1
+UnitsofMeasure: ""
+ComponentPercentCutoff: 0
+InterpretNullsAsZero: "False"
+BeginningMonth: ""
+EndingMonth: ""
+LayerOption: ""
+TopDepth: 0
+BottomDepth: 0
+DepthUnits: ""
+PrimaryDataSelectOptionLabel: ""
+PrimaryDataSelectOption: ""
+SecondaryDataSelectOptionLabel: ""
+SecondaryDataSelectOption: ""
+HorizonAggregationMethod: "Weighted Average"
+ResultDataType: "String"
+ResultPrecision: ""
+ResultColumnName: "pfasatten"
+SdvAttributeDescription: "PFAS
+
+PFAS Attenuation in Soils
+
+PFAS chemicals are a wide variety of manmade compounds that have been entered into the environment for many different reasons.  Since the molecules are generally anionic, they have some degree of mobility in soils.  The research illustrates a variety of interactions between PFAS and soil constituents that can lead to the movement of PFAS with water being slowed or perhaps even stopped at least temporarily.  Li et al (2018) report on several mechanisms of sorption-desorption in their review of the literature.  These mechanisms conceptually include hydrophobic interaction with organic matter, ligand bridging through divalent cations, electrostatic interaction with positive charges on mineral surfaces and some organic matter, and electrostatic interaction with oxides (Li et al. 2018).  In their study of differing sizes of PFAS molecules and differing soil properties, Nguyen et al. (2020) concluded that many soil properties need to be evaluated in studying PFAS mobility in soils and also the size and shape of the PFAS molecules play a role in attenuation.  They also hypothesize that some PFAS molecules may be trapped in soil micropores and the volume of soil available for sorption-desorption must be considered in the field (Nguyen et al. 2020).  Brusseau (2019) reports that adsorption at air-water interfaces can cause significant retention of PFAS spatially and temporally.  The amount of interfacial adsorption depends upon the volume of soil present (Brusseau, 2019). 
+ 
+Recently, there has been study of a ""non-extractable residue"" (NER) of PFAS chemicals (Gassmann et al. 2020) but the mechanism of occlusion remains obscure.  Gassmann et al. 2020) have postulated that the PFAS molecules may occasionally be physically entrapped into the soil organic matter matrix, rather than adsorbed on the surface.  Uwayezu et al. (2019) examined the interactions between PFOS isomers and goethite in varying regimes of pH, organic matter and sulphate.  As pH was increased from 4.36 sorption of PFOS decreased due to the changing of the charge of organic matter.  Sorption of PFOS in the pH range less than 7.5 is thought to be due to electrostatic attractions between iron minerals such as goethite surfaces and the PFOS anions (Uwayezu et al. 2019).  Campos-Pereira et al. (2020) also examined the adsorption of PFAS by poorly crystalline ferrihydrite as a function of pH and phosphate concentration.
+
+PFAS Attenuation Model
+
+Many of the parameters that address the mobility of PFAS in soils that have been examined in the literature are data elements in the soil survey database.  Thus, the database should prove useful in tying the relative mobility of PFAS to soil and site properties.  Keep in mind that the goal is to provide an array of the relative ability of soils to hold PFAS and not a quantitative estimate at this time.  The model is focused on an eight-carbon chain molecule having a carboxyl functional group.
+
+The overall rule-based fuzzy logic model contains four sub-rules.  First, the surface area of unsaturated soil is estimated, as is suggested by the work of Nguyen et al. (2020) and Brusseau (2019).  This capacity factor is considered as the surface area of soil throughout the year that exists on a one-centimeter square of soil multiplied by the depth, in cm, to the saturated zone or bedrock summed over twelve months.  The surface area of unsaturated soil membership function evaluates a crude estimate of the surface area of unsaturated soil available for sorption-desorption processes.  The estimate of surface area is calculated from the proportion of the fine earth fraction multiplied by the clay percentage.  The frame of reference is limited to 200 cm, which is the depth of inference for the soil survey.  Shallow bedrock or water restrictive layers will decrease the volume of unsaturated soil.  The conceptual unit is a vertical rectangular prism 1cm x 1cm x the estimated depth of reference.  This surface area is summed over the 12 months of the year.  Thus, a soil averaging 60 percent clay through 200 cm depth, having no saturation, restriction, or rock fragments, would have a relative surface rating of 960.  An impervious surface or water table at or above the surface for the duration of the year is defined as 0.
+
+The next sub-rule considers the anion exchange capacity of the amorphous materials in soils and the organic matter content.  This is pH dependent charge that is manifested at low pH.  Some soil orders, such as Andisols, are characterized by typically having a large concentration of poorly crystalline materials while young soils, such as Inceptisols are generally low in amorphous materials.  This sub-rule is suggested by the work of Uwayezu et al. (2019) and Gassmann et al. (2020).  The amorphous materials sub-rule is composed of several membership functions that describe differing soil conditions.  Since the content of iron and aluminum oxides is not currently well-populated in the database, Soil Taxonomic mineralogy family classes are used to fill the gaps.  Soils in Taxonomic mineralogy families of ""amorphic"", ""halloysitic"", ""ferruginous"", ""kaolinitic"", ""parasesquic"", ""oxidic"", ""ferritic"", ""gibbsitic"", ""sesquic"", ""allitic"", ""ferrihydritic"", ""glassy"", ""parasesquic"", or ""isotic"" are assumed to contain significant amounts of amorphous materials that can have anion exchange capacity at low pH.  The soil pH is evaluated over the range from 4.5 to 5.0 for its effect on anion exchange.  Taxonomic order is used as a proxy for free iron oxide content, assuming that more highly weathered soils have more free iron oxides than less weathered soils and may have anion exchange if the pH is low.  The soil orders are arrayed as follows: Andisols greater than Spodosols equal to Oxisols greater than Ultisols equal to Histosols greater than Alfisols greater than Inceptisols greater than Entisols.  The soil orders of Gelisols, Mollisols, Vertisols, Aridisols are not considered to have anion exchange and because of this will not attenuate PFAS by this mechanism.  Campos-Pereira et al. (2020) observed adsorption of PFAS on poorly crystalline iron oxides when the pH was below 7 for most PFAS species.  This suggests pH dependent anion exchange may persist in soils when the pH is above 4.5.
+
+For the third sub-rule, a large body of literature examines the interaction between PFAS materials and soil organic matter. Higgins and Luthy (2006), Millinovic et al. (2015), Li et al. (2012), and Zhu et al. (2021) all conclude that the organic materials in soil can sorb PFAS.  Thus, a soil organic matter sub-rule provides a relative measure of the organic matter content of the profile of soils, in kilograms organic matter per meter square of soil. Soil organic matter content is highly correlated with PFAS attenuation.  The type of organic matter likely also has some bearing, but the current model is constrained to only look at the estimate of the total amount.  The organic matter content is evaluated over the range of 5 kg/m2 to 50 kg/m2.  Higher organic matter contents are assumed to cause more attenuation of PFAS.
+
+The fourth sub-rule considers the interactions between temperature, land surface slope, and the annual fluctuations of a water table on PFAS mobility.  This subrule consists of a further three sub-rules.  The sorption-desorption processes are temperature dependent and will be drastically slowed in frozen soils.  The ideas of Brusseau (2019), Nguyen et al. (2020), Gassmann et al. (2020), and Gassmann et al. 2020) suggest that cyclical reduction-oxidation processes which dissolve and recrystallize amorphous iron oxides could play a role in the entrapment and release of PFAS at air-water interfaces.  Since not all water movement in soils is vertical, the lateral component of PFAS movement must be considered.  In a reduced soil, PFAS, ferrous iron, and water will flow laterally downslope.  Once an oxidized condition is encountered the ferrous iron will oxidize and demobilize.  The PFAS may be entrapped in the oxides.  The water table fluctuation, temperature, and slope subrule considers flow of water, ferrous iron, and PFAS laterally through soil.  The temperature of the system is known to affect the rates of chemical reactions and presumably the rates of sorption and desorption which in turn affects attenuation.  Not mentioned here, although it perhaps should be, is the effect of frozen soil on the attenuation of PFAS. 
+ 
+Soils in areas where the mean annual air temperature is less than 10 degrees C are likely to be frozen to some depth for some time during the year.  These dynamics are yet to be studied.  For the current model, it is considered that higher temperature will enhance attenuation of PFAS because of the temperature effect on biological and chemical systems.
+Any appreciable slope on the landscape is assumed to drive lateral movement under saturated conditions.  In soils having slope less than 5 percent it is assumed that PFAS will be attenuated in place.  On steeper slopes, it is postulated that less attenuation will occur as the soil water moves downslope.
+
+Relationships between water table fluctuations, oxidation-reduction processes, iron oxide chemistry, and PFAS attenuation have not yet been thoroughly explored.  A net gain in attenuation is hypothesized here because of the dissolution and precipitation of iron is thought to form structures where the PFAS anions may be held.  While other soil features may affect the ability of a soil to hold PFAS, currently the thickness of soil that is affected by the rising and falling of the zone of saturation is considered here.  Since the air-water interface seems to be important for this process, this sub-rule examines the distance between the top of the shallowest water depth and the top of the deepest water depth or 200cm.  This sub-rule has no effect if no water table is present.  The occurrence of lateral water movement is theorized to allow less attenuation because the PFAS is moving with water and any reduced iron, so less time is available for precipitation of the iron species.  Note that if a fluctuating water table does not exist, this sub-rule does not contribute to PFAS attenuation.
+
+In this iteration of the model, the effects of each sub-rule are summed to obtain the overall relative attenuation capacity of a soil.
+
+The ratings are both verbal and numerical. Rating class terms indicate the extent to which the soils will attenuate PFAS by all of the soil features that affect this process. ""High attenuation"" indicates that the soil has features that are very favorable for immobilizing PFAS. A sampling plan should concentrate on near-surface layers.  ""Moderately high attenuation"" suggests that while the bulk of PFAS will be near the soil surface, some may be moving downward.  ""Moderate attenuation"" suggests that downward movement is to be expected.  ""Moderately low attenuation"" indicates that the PFAS may have moved below the soil surface and be heading toward the groundwater or moving laterally to a surface outlet.  ""Low attenuation"" indicates that soil features are not conducive to stopping or slowing PFAS movement and that subsurface or surface water contamination is likely. 
+
+Numerical ratings indicate the degree of attenuation. The ratings are shown in decimal fractions ranging from 0.01 to 1.00. They indicate gradations between the point at which a soil has the least predicted ability to hold PFAS (0.00) and the point at which the soil features are predicted to hold PFAS tightly (1.00).
+
+The map unit components listed for each map unit in the accompanying Summary by Map Unit table in Web Soil Survey or the Aggregation Report in Soil Data Viewer are determined by the aggregation method chosen.  An aggregated rating class is shown for each map unit. The components listed for each map unit are only those that have the same rating class as listed for the map unit.  The percent composition of each component in a particular map unit is presented to help the user better understand the percentage of each map unit that has the rating presented.  
+
+Other components with different ratings may be present in each map unit.  The ratings for all components, regardless of the map unit aggregated rating, can be viewed by generating the equivalent report from the Soil Reports tab in Web Soil Survey or from the Soil Data Mart site. Onsite investigation may be needed to validate these interpretations and to confirm the identity of the soil on a given site.
+
+
+References
+
+Brusseau, Mark L. 2019. The influence of molecular structure on the adsorption of PFAS to fluid-fluid interfaces: Using QSPR to predict interfacial adsorption coefficients. Water Research 152 (2019) 148e158. 
+
+Campos-Pereira, Hugo, Dan B. Kleja, Carin Sjostedt, Lutz Ahrens, Wantana Klysubun, and Jon Petter.  Gustafsson. 2020. The Adsorption of Per- and Polyfluoroalkyl Substances (PFASs) onto Ferrihydrite Is Governed by Surface Charge.  Environmental Science & Technology. 54 (24), 15722-15730. DOI: 10.1021/acs.est.0c01646.
+
+Evich, M. G. et al. 2022. Per- and polyfluoroalkyl substances in the environment. Science 375, eabg9065 (2022). DOI: 10.1126/science.abg9065.
+
+EPA Technical Factsheet. https://19january2021snapshot.epa.gov/sites/static/files/2017-12/documents/ffrrofactsheet_contaminants_pfos_pfoa_11-20-17_508_0.pdf.
+
+Gassmann, Matthias, Eva Weidemann, Thorsten Stahl. 2020. Combined leaching and plant uptake simulations of PFOA and PFOS under field conditions. Environmental Science and Pollution Research (2021) 28:2097–2107. https://doi.org/10.1007/s11356-020-10594-6.
+
+Li, Yasong, Danielle P. Oliver, Rai S. Kookana. 2018. A critical analysis of published data to discern the role of soil and sediment properties in determining sorption of per and polyfluoroalkyl substances (PFASs). https://doi.org/10.1016/j.scitotenv.2018.01.167.
+
+NRCS PFAS Factsheet. https://www.whidbeycd.org/uploads/1/1/6/8/11683986/pfafactshee.pdf.
+
+Nguyen, Thi Minh Hong, Jennifer Braunig, Kristie Thompson, Jack Thompson, Shervin Kabiri, Divina A. Navarro, Rai S. Kookana, Charles Grimison, Craig M. Barnes, Christopher P. Higgins, Michael J. McLaughlin, and Jochen F. Mueller. 2020. Influences of Chemical Properties, Soil Properties, and Solution pH on Soil–Water Partitioning Coefficients of Per- and Polyfluoroalkyl Substances (PFASs). Environmental Science & Technology 2020 54 (24), 15883-15892. DOI: 10.1021/acs.est.0c05705.
+
+Uwayezu, Jean-Noel, Leo W.Y. Yeung, Mattias Backstrom. 2019. Sorption of PFOS isomers on goethite as a function of pH, dissolved organic matter (humic and fulvic acid) and sulfate. Chemosphere 233 (2019) 896e904. https://doi.org/10.1016/j.chemosphere.2019.05.252.
+
+"
