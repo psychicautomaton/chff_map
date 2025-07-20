@@ -33,6 +33,7 @@ suppressPackageStartupMessages(library(sf))
 suppressPackageStartupMessages(library(leafgl))
 suppressPackageStartupMessages(library(htmlwidgets))
 suppressPackageStartupMessages(library(htmltools))
+suppressPackageStartupMessages(library(geojsonsf))
 library(flextable)
 ```
 
@@ -43,64 +44,120 @@ dbp <- "/Users/mxdwivedi/Documents/GIS/chff/chff_map/db_gpkg/chff.gpkg"
 
 ```{r, results='hide'}
 mu_aggs <- st_read(dbp,
-                      layer = "muaggatt") #%>% 
- # select(musym, Clay_DCD_AL) %>%
- # distinct()
+                      layer = "muaggatt") %>%
+  select(
+    musym,
+    muname,
+    slopegraddcp,
+    flodfreqdcd,
+    drclassdcd,
+    engstafdcd,
+    engsldcd
+  ) %>%
+  rename(
+    slope_gradiant = slopegraddcp,
+    flooding_freq = flodfreqdcd,
+    drainage_class = drclassdcd,
+    septic_tank_absorption = engstafdcd,
+    sewage_lagoons = engsldcd
+  )
+
+
+
 lims_soil_organisms <- st_read(dbp,
-                               layer = "rating_AeriOrgL_DCD")
-flood_freq_class <- st_read(dbp,
-                            layer = "rating_FloodFCls_DCD_jan_dec")
+                               layer = "rating_AeriOrgL_DCD") %>%
+  select(musym,
+         muname,
+         AeriOrgL_DCD
+        #  
+         ) %>%
+  rename(limits_aerobic_organisms = AeriOrgL_DCD)
 
 
 
 depth_water_table <- st_read(dbp,
-                             layer = "rating_Dep2WatTbl_DCD_jan_dec")
-
-drain_class <- st_read(dbp,
-                       layer = "rating_DrainClass_DCD")
+                             layer = "rating_Dep2WatTbl_DCD_jan_dec") %>%
+  select(musym, muname, Dep2WatTbl_DCD_jan_dec) %>%
+  rename(depth_to_water_table = Dep2WatTbl_DCD_jan_dec)
 
 
 drought_vuln <- st_read(dbp,
-                        layer = "rating_DrouVulSoi_DCD")
+                        layer = "rating_DrouVulSoi_DCD") %>%
+  select(musym, muname, DrouVulSoi_DCD) %>%
+  rename(drought_vulnerability = DrouVulSoi_DCD)
 
 hand_planting_suitability <- st_read(dbp,
-                                     layer = "rating_HandPlant_DCD")
+                                     layer = "rating_HandPlant_DCD") %>%
+  select(musym, muname, HandPlant_DCD) %>%
+  rename(hand_planting_suitability = HandPlant_DCD)
 
 
 compaction_susceptibility <- st_read(dbp,
-                                     layer = "rating_SoilSuscCo_DCD")
+                                     layer = "rating_SoilSuscCo_DCD") %>%
+  select(musym, muname, SoilSuscCo_DCD) %>%
+  rename(compaction_susceptibility = SoilSuscCo_DCD)
 
 surface_texture <- st_read(dbp,
-                           layer = "rating_TexSurf_DCD_SL")
+                           layer = "rating_SurfText_DCD_SL") %>%
+  select(musym, muname, SurfText_DCD_SL) %>%
+  rename(surface_texture = SurfText_DCD_SL)
 
 
 crop_productivity_index <- st_read(dbp,
-                                   layer = "rating_NCCPI_WA")
+                                   layer = "rating_NCCPI_WA") %>%
+  select(musym, muname, NCCPI_WA) %>%
+  rename(crop_productivity_index = NCCPI_WA)
 
-
-
-
-
-
-
+ph <- st_read(dbp,
+              layer = "rating_pHwater_DCD_AL") %>%
+  select(musym, muname, pHwater_DCD_AL) %>%
+  rename(water_pH = pHwater_DCD_AL)
 
 
 musym <- st_read(dbp,
                       layer = "mapunit")  %>% 
-  select(musym, muname, interpfocus) %>% distinct()
+  select(musym, muname, interpfocus,
+         muacres, farmlndcl) %>% 
+  rename(interpretive_focus = interpfocus,
+         farmland_class = farmlndcl) %>%
+  distinct()
 
 
 mupoly <- st_read(dbp,
                       layer = "mupolygon") %>%
-  select(musym, shape, areasymbol) %>% distinct()
+  select(musym, shape) %>% distinct()
+
+
 ```
 
 
 ```{r data_cleaning}
 
+df <- left_join(mupoly, musym, by = "musym") %>%
+  left_join(mu_aggs, by = c("musym", "muname")) %>%
+  left_join(lims_soil_organisms, by = c("musym", "muname")) %>%
+  left_join(depth_water_table, by = c("musym", "muname")) %>%
+  left_join(drought_vuln, by = c("musym", "muname")) %>%
+  left_join(hand_planting_suitability, by = c("musym", "muname")) %>%
+  left_join(compaction_susceptibility, by = c("musym", "muname")) %>%
+  left_join(surface_texture, by = c("musym", "muname")) %>%
+  left_join(crop_productivity_index, by = c("musym", "muname")) %>%
+  left_join(ph, by = c("musym", "muname")) %>%
+  distinct()
+
+soil_survey <- st_transform(df, crs = "OGC:CRS84")
+
 ```
 
+```{r import_geojson_ch_mask}
+ch_mask <- geojson_sf("crown_heights_mask.geojson")
+ch_mask <- sf::st_transform(ch_mask, crs = "OGC:CRS84")
+```
 
+```{r}
+selected_map_units <- soil_survey %>%
+  st_filter(y = ch_mask, .predicate = st_overlaps)
+```
 
 
 ```{r, results='hide'}
@@ -112,6 +169,9 @@ chff <- st_read('chff_pluto.shp') %>%
          ) 
 
 chff <- st_transform(chff, crs = "OGC:CRS84")
+
+chff <- chff %>%
+  st_filter(y = ch_mask, .predicate = st_intersects)
 
 owner_type <- read.csv('owner_type_codes.csv')
 
@@ -186,6 +246,7 @@ leaflet(chff) %>%
                               "<br> Assessed Value: ", 
                               paste0("$",
                                      scales::label_comma(accuracy = 1)(chff$AssessTot)))) %>%
+  addPolygons(data = selected_map_units) %>%
   addLegend("bottomright", 
             pal = pal, 
             values = ~Description,
