@@ -155,8 +155,14 @@ ch_mask <- sf::st_transform(ch_mask, crs = "OGC:CRS84")
 ```
 
 ```{r}
-selected_map_units <- soil_survey %>%
-  st_filter(y = ch_mask, .predicate = st_overlaps)
+#inside_map_units <- soil_survey %>%
+ # st_filter(y = ch_mask, .predicate = st_within)
+
+#intersect_map_units <- soil_survey %>%
+ # st_filter(y = ch_mask, .predicate = st_intersects)
+
+selected_map_units <- st_intersection(soil_survey, ch_mask)#rbind(inside_map_units, intersect_map_units)
+
 ```
 
 
@@ -201,21 +207,20 @@ chff <- left_join(chff, owner_type,
 
 ```
 
-```{r}
-
-```
 
 # Interactive Map of Crown Heights for Site Selection for a Food Forest
 
 # 
 
-### (lots with area \> 1/8th acre that are either vacant or zoned for public recreation)
+### Displays lots with area of more than 1/8th acre that are either vacant or zoned for public recreation.
 
-You can click on the interactive lots below to see more details.
+You can click on the interactive lots or soil map units below to see more details.
 
 ```{r, fig.height=40}
 pal <- colorFactor(palette = "viridis",
                     domain = chff$Description)
+#pal2 <- colorFactor(palette = "magma",
+                  #  domain = selected_map_units$crop_productivity_index)
 leaflet(chff) %>%
   addMapboxTiles(
     style_id = "cmabwhdzg007c01rz4ejl7nel",
@@ -225,8 +230,14 @@ leaflet(chff) %>%
     lng = -73.94107,
     lat = 40.67045,
     zoom = 13.5
-  ) %>%
+  )  %>%
+  addPolygons(data = ch_mask,
+              color = "blue",
+              fillColor = "transparent",
+              group = "Crown Heights Boundary") %>%
   addPolygons(color = pal(chff$Description),
+              fillColor = pal(chff$Description),
+              fillOpacity = .6,
               label= paste0("Block-Lot #:",
                             chff$Block, 
                             "-",
@@ -236,6 +247,7 @@ leaflet(chff) %>%
                             " (Bldg. Class: ",
                             chff$vacant_status,
                             ")"),
+              group = "Vacant/Public Lots",
               popup = ~paste0("Address: ", chff$Address,
                               "<br> Ownership Type: ", chff$Description,
                               "<br> Owner Name: ", chff$OwnerName,
@@ -246,10 +258,31 @@ leaflet(chff) %>%
                               "<br> Assessed Value: ", 
                               paste0("$",
                                      scales::label_comma(accuracy = 1)(chff$AssessTot)))) %>%
-  addPolygons(data = selected_map_units) %>%
+  addPolygons(data = selected_map_units,
+              color = "grey",
+             # color = pal2(selected_map_units$crop_productivity_index),
+              label = ~paste0(selected_map_units$musym,": ",selected_map_units$surface_texture),
+             group = "Soil Survey Data",
+             popup = ~paste0("Map Unit (MU) Name: ", selected_map_units$muname,
+                             "<br> Description: ", selected_map_units$interpretive_focus,
+                             "<br> Water pH: ", selected_map_units$water_pH,
+                             "<br> Drainage Class: ", selected_map_units$drainage_class,
+                             "<br> Slope Gradient: ", selected_map_units$slope_gradiant,
+                             "<br> Limitations for Aerobic Organisms: ", selected_map_units$limits_aerobic_organisms,
+                             "<br> Drought Vulnerability: ", selected_map_units$drought_vulnerability,
+                             "<br> Hand-Planting Suitability: ", selected_map_units$hand_planting_suitability,
+                             "<br> Compaction Susceptibility: ", selected_map_units$compaction_susceptibility,
+                             "<br> Crop Productivity Index: ", selected_map_units$crop_productivity_index
+                             
+                             
+             ))  %>%
+  
+  addLayersControl(baseGroups = "Mapbox",
+                   overlayGroups = c("Vacant/Public Lots", "Soil Survey Data", "Crown Heights Boundary")) %>%
+  
   addLegend("bottomright", 
             pal = pal, 
             values = ~Description,
     title = "Owner Type",
-    opacity = .6)
+    opacity = .85)
 ```
